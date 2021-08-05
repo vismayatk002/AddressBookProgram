@@ -1,22 +1,39 @@
 public class AddressBook extends Contact{
 
-    String address, city, state, phoneNo ;
-    long zip;
-    public AddressBook(String firstName, String lastName, String email){
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-    }
-    public void setDetails(String address, String city, String state, String phoneNo, long zip){
+    String address, city, state;
+    int zip;
+    long phoneNo;
 
+    public void setAddress(String address){
         this.address = address;
+    }
+    public String getAddress(){
+        return address;
+    }
+    public void setCity(String city){
         this.city = city;
+    }
+    public String getCity(){
+        return city;
+    }
+    public void setState(String state){
         this.state = state;
+    }
+    public String getState(){
+        return state;
+    }
+    public void setPhoneNo(long phoneNo){
         this.phoneNo = phoneNo;
+    }
+    public long getPhoneNo(){
+        return phoneNo;
+    }
+    public void setZip(int zip){
         this.zip = zip;
     }
-    public void printValue(){
-
-        System.out.println("\nFirst Name  : " + firstName  + "\nLast Name : " + lastName + "\nAddress : " + address + "\nCity : " + city + "\nState   : " + state + "\nZip    : " + zip + "\nPhone Number : " + phoneNo + "\nE-mail   : " + email); 
+    public int getZip(){
+        return zip;
     }
+    
+
 }
