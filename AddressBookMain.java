@@ -61,6 +61,17 @@ public class AddressBookMain{
 
            contactArr[i].showContact(contactArr[i]);
         }
+        sc.nextLine();
+        System.out.print("\nDo you want to delete? press Y / N : ");
+        char deleteOption = sc.next().charAt(0);
+        if(deleteOption == 'Y'){
+            person.deleteContact(contactArr);
+        }
+        
+        for(int i=0; i<contactArr.length; i++){
+
+           contactArr[i].showContact(contactArr[i]);
+        }
     sc.close();
     }
 }

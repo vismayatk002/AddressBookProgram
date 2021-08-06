@@ -1,6 +1,7 @@
 import java.util.*;
 public class AddressBook extends Contact{
 
+    
     String address, city, state;
     int zip;
     long phoneNo;
@@ -67,4 +68,26 @@ public class AddressBook extends Contact{
         }
         sc.close();
     }
+    public void deleteContact(AddressBook[] contactArr){
+
+        Scanner sc= new Scanner(System.in);
+        System.out.print("\nEnter the First name for delete : ");
+        String editName = sc.nextLine();
+        int flag = 1;
+        for(int i=0; i<contactArr.length; i++){
+            if(editName.equals(contactArr[i].getFirstName())){
+                AddressBook detail = new AddressBook();
+                contactArr[i] = detail;
+                flag = 0;
+            }
+        }
+        if(flag == 1){
+            System.out.print("\ncouldn't find the contact..");
+        } 
+        else{
+            System.out.print("\nYour contact deleted..");
+        }
+        sc.close();
+    }
+   
 }
